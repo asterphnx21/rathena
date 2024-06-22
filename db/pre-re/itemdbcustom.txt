@@ -1,0 +1,4 @@
+42011,VIP_3D,VIP Ticket 3D,0,2,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ vip_time 4320; },{},{}
+42012,VIP_7D,VIP Ticket 7D,0,2,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ vip_time 10080; },{},{}
+42013,VIP_30D,VIP Ticket 30D,0,2,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ vip_time 43200; },{},{}
+42014,VIP_60D,VIP Ticket 60D,0,2,,10,,,,,0xFFFFFFFF,63,2,,,,,,{ vip_time 86400; },{},{}

@@ -13,7 +13,7 @@
 #define MAP_GEFFEN "geffen"
 #define MAP_MORROC "morocc"
 #define MAP_ALBERTA "alberta"
-#define MAP_PAYON "payon"
+#define MAP_PAYON "payo2"
 #define MAP_IZLUDE "izlude"
 #define MAP_ALDEBARAN "aldebaran"
 #define MAP_LUTIE "xmas"

@@ -3,6 +3,8 @@
 
 #ifndef CONFIG_CUSTOM_DEFINES_PRE_HPP
 #define CONFIG_CUSTOM_DEFINES_PRE_HPP
+//#define PACKETVER 20151104
+#define PACKETVER 20220330
 
 /**
  * rAthena configuration file (http://rathena.org)

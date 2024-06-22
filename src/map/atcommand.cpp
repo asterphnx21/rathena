@@ -236,7 +236,77 @@ static const char* atcommand_help_string( const char* command ){
 	// push the result from the method
 	return info->help.c_str();
 }
+// Auto Attack --- put before all command
+static int buildin_autoattack_sub(struct block_list* bl, va_list ap)
+{
+	int* target_id = va_arg(ap, int*);
+	*target_id = bl->id;
+	return 1;
+}
 
+void autoattack_motion(struct map_session_data* sd)
+{
+	int i, target_id;
+	if (pc_isdead(sd) || !sd->state.autoattack) return;
+
+	for (i = 0;i <= 9;i++)
+	{
+		target_id = 0;
+		map_foreachinarea(buildin_autoattack_sub, sd->bl.m, sd->bl.x - i, sd->bl.y - i, sd->bl.x + i, sd->bl.y + i, BL_MOB, &target_id);
+		if (target_id) {
+			unit_attack(&sd->bl, target_id, 1);
+			break;
+		}
+		target_id = 0;
+	}
+	if (!target_id && !pc_isdead(sd) && sd->state.autoattack) {
+		unit_walktoxy(&sd->bl, sd->bl.x + (rand() % 2 == 0 ? -1 : 1) * (rand() % 25), sd->bl.y + (rand() % 2 == 0 ? -1 : 1) * (rand() % 25), 0);
+	}
+	return;
+}
+
+static TIMER_FUNC(autoattack_timer)
+{
+	struct map_session_data* sd = NULL;
+
+	sd = map_id2sd(id);
+	if (sd == NULL || pc_isdead(sd) || !sd->state.autoattack)
+		return 0;
+
+	if (sd->state.autoattack)
+	{
+		unit_stop_attack(&sd->bl);
+		autoattack_motion(sd);
+		if (DIFF_TICK(sd->autoattack_delay, gettick()) > 0) {
+			clif_authfail_fd(sd->fd, 15);
+			return 0;
+		}
+		else {
+			add_timer(gettick() + 1000, autoattack_timer, sd->bl.id, 0);    // 1000 is delay
+			sd->autoattack_delay = gettick() + 1000;    // 1000 is delay
+		}
+	}
+	return 0;
+}
+
+ACMD_FUNC(autoattack)
+{
+	nullpo_retr(-1, sd);
+	if (sd->state.autoattack)
+	{
+		sd->state.autoattack = 0;
+		unit_stop_attack(&sd->bl);
+		clif_displaymessage(fd, "Auto Attack has been deactivated.");
+	}
+	else
+	{
+		sd->state.autoattack = 1;
+		add_timer(gettick() + 1000, autoattack_timer, sd->bl.id, 0);
+		clif_displaymessage(fd, "Auto Attack activated.");
+	}
+	return 0;
+}
+//
 
 /*==========================================
  * @send (used for testing packet sends from the client)
@@ -10999,6 +11069,7 @@ void atcommand_basecommands(void) {
 	 **/
 	AtCommandInfo atcommand_base[] = {
 #include <custom/atcommand_def.inc>
+		ACMD_DEF(autoattack),
 		ACMD_DEF2R("warp", mapmove, ATCMD_NOCONSOLE),
 		ACMD_DEF(where),
 		ACMD_DEF(jumpto),

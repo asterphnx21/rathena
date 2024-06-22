@@ -1,0 +1,61 @@
+//CUSTOM Fenrir Portal
+payo2,77,125,5	script	Fenrir Portal	10007,{
+	switch(select("Go to Fenrir Guild Hall:Cancel")) {
+	case 1:
+		warp "moc_para01", 31, 15; // Warps the player to moc_para01 at coordinates (31, 15)
+		break;
+	case 2:
+		mes "WOOOOB!";
+		close;
+		break;
+		
+	OnInit:
+	initnpctimer;
+	end;
+
+	OnTimer1000:
+	showscript("Fenrir Portal");
+	setnpctimer 0;
+	end;
+	
+	}
+	end;
+}
+
+//alb2trea,57,70,6	duplicate(Fenrir Portal)	Fenrir Portal#tre	10007
+alberta,28,240,4	duplicate(Fenrir Portal)	Fenrir Portal#alb	10007
+aldebaran,145,118,4	duplicate(Fenrir Portal)	Fenrir Portal#alde	10007
+amatsu,203,87,4	duplicate(Fenrir Portal)	Fenrir Portal#ama	10007
+ayothaya,209,169,6	duplicate(Fenrir Portal)	Fenrir Portal#ayo	10007
+comodo,194,158,4	duplicate(Fenrir Portal)	Fenrir Portal#com	10007
+einbech,59,38,6	duplicate(Fenrir Portal)	Fenrir Portal#einbe	10007
+einbroch,69,202,4	duplicate(Fenrir Portal)	Fenrir Portal#einbr	10007
+gef_fild10,71,339,4	duplicate(Fenrir Portal)	Fenrir Portal#orc	10007
+geffen,124,72,4	duplicate(Fenrir Portal)	Fenrir Portal#gef	10007
+//glast_01,372,308,4	duplicate(Fenrir Portal)	Fenrir Portal#glh	10007
+gonryun,162,122,4	duplicate(Fenrir Portal)	Fenrir Portal#gon	10007
+hugel,101,151,4	duplicate(Fenrir Portal)	Fenrir Portal#hug	10007
+//izlu2dun,110,92,4	duplicate(Fenrir Portal)	Fenrir Portal#izd	10007
+izlude,134,150,4	duplicate(Fenrir Portal)	Fenrir Portal#izl	10007	//Pre-RE: (132,120)
+jawaii,253,138,4	duplicate(Fenrir Portal)	Fenrir Portal#jaw	10007
+lighthalzen,162,102,4	duplicate(Fenrir Portal)	Fenrir Portal#lhz	10007
+louyang,208,103,6	duplicate(Fenrir Portal)	Fenrir Portal#lou	10007
+manuk,274,146,6	duplicate(Fenrir Portal)	Fenrir Portal#man	10007
+mid_camp,216,288,4	duplicate(Fenrir Portal)	Fenrir Portal#mid	10007
+//mjolnir_02,85,364,4	duplicate(Fenrir Portal)	Fenrir Portal#mjo	10007
+moc_ruins,64,164,4	duplicate(Fenrir Portal)	Fenrir Portal#moc	10007
+morocc,159,97,4	duplicate(Fenrir Portal)	Fenrir Portal#mor	10007
+moscovia,229,191,4	duplicate(Fenrir Portal)	Fenrir Portal#mos	10007
+nameless_n,259,213,4	duplicate(Fenrir Portal)	Fenrir Portal#nam	10007
+niflheim,205,179,4	duplicate(Fenrir Portal)	Fenrir Portal#nif	10007
+//pay_arche,42,134,4	duplicate(Fenrir Portal)	Fenrir Portal#arc	10007
+payon,182,108,4	duplicate(Fenrir Portal)	Fenrir Portal#pay	10007
+prontera,159,192,4	duplicate(Fenrir Portal)	Fenrir Portal#prt	10007
+//prt_fild05,279,223,6	duplicate(Fenrir Portal)	Fenrir Portal#cul	10007
+rachel,135,116,4	duplicate(Fenrir Portal)	Fenrir Portal#rac	10007
+splendide,205,153,4	duplicate(Fenrir Portal)	Fenrir Portal#spl	10007
+thor_camp,249,76,4	duplicate(Fenrir Portal)	Fenrir Portal#thor	10007
+umbala,106,150,3	duplicate(Fenrir Portal)	Fenrir Portal#umb	10007
+veins,214,123,4	duplicate(Fenrir Portal)	Fenrir Portal#ve	10007
+xmas,150,136,6	duplicate(Fenrir Portal)	Fenrir Portal#xmas	10007
+yuno,162,47,4	duplicate(Fenrir Portal)	Fenrir Portal#yuno	10007

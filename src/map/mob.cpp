@@ -6886,3 +6886,5 @@ void do_final_mob(bool is_reload){
 		mob_delayed_drops.clear();
 	}
 }
+
+

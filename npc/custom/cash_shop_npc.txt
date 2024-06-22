@@ -1,0 +1,58 @@
+moc_para01,28,36,4	cashshop    Cash Shop NPC    857,{
+    
+    mes "[Cash Shop]";
+    mes "Welcome to the Cash Shop!";
+    mes "What would you like to purchase today?";
+    next;
+    menu "Consumables", -Consumables, "Headgears", -Headgears, "Cancel", -Cancel;
+    
+    Consumables:
+        set @category, 1;
+        goto ItemSelection;
+        
+    Headgears:
+        set @category, 2;
+        goto ItemSelection;
+        
+    Cancel:
+        close;
+        
+    ItemSelection:
+        if (@category == 1) {
+            // List of Consumables
+            setarray .@items[0], 501, 502, 503; // Item IDs
+            setarray .@prices[0], 1, 1, 1;      // Prices in tokens
+        } else if (@category == 2) {
+            // List of Headgears
+            setarray .@items[0], 5014, 5015, 5016; // Item IDs
+            setarray .@prices[0], 5, 5, 5;        // Prices in tokens
+        }
+        
+        mes "[Cash Shop]";
+        mes "Please select an item:";
+        for (set .@i, 0; .@i < getarraysize(.@items); set .@i, .@i + 1) {
+            mes "^FF0000" + getitemname(.@items[.@i]) + "^000000 - " + .@prices[.@i] + " Token(s)";
+        }
+        next;
+        
+        set .@itemSelection, select(getitemname(.@items[0]), getitemname(.@items[1]), getitemname(.@items[2])) - 1;
+        set @selectedItem, .@items[.@itemSelection];
+        set @itemPrice, .@prices[.@itemSelection];
+        
+        mes "[Cash Shop]";
+        mes "You have selected ^FF0000" + getitemname(@selectedItem) + "^000000.";
+        mes "This item costs ^FF0000" + @itemPrice + " Token(s)^000000.";
+        next;
+        
+        if (countitem(7539) < @itemPrice) { // Assuming 7539 is the payment token ID
+            mes "[Cash Shop]";
+            mes "You do not have enough tokens.";
+            close;
+        }
+        
+        delitem 7539, @itemPrice; // Remove the tokens
+        getitem @selectedItem, 1; // Give the selected item
+        mes "[Cash Shop]";
+        mes "Thank you for your purchase!";
+        close;
+}

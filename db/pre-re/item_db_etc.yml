@@ -21145,18 +21145,35 @@ Body:
     Script: |
       bonus bAtkEle,Ele_Ghost;
   - Id: 18004
-    AegisName: Iron_Cannon_Ball
-    Name: Iron Cannon Ball
-    Type: Ammo
-    SubType: Cannonball
-    Buy: 500
-    Weight: 10
-    Attack: 250
+    AegisName: Kafra_Credit_Coin
+    Name: Kafra Credit Coin
+    Type: Etc
+    Buy: 0
+    Weight: 0
     Jobs:
-      Alchemist: true
-      Blacksmith: true
+      Alchemist: false
+      Blacksmith: false
     Classes:
-      Third: true
-    Locations:
-      Ammo: true
-    EquipLevelMin: 99
+      Third: false
+  - Id: 31496
+    AegisName: Kafra_Credit_Coin2
+    Name: Kafra Credit Coin
+    Type: Etc
+    Buy: 0
+    Weight: 0
+    Jobs:
+      Alchemist: false
+      Blacksmith: false
+    Classes:
+      Third: false
+  - Id: 31497
+    AegisName: Stylist_Ticket
+    Name: Stylist Ticket
+    Type: Etc
+    Buy: 0
+    Weight: 0
+    Jobs:
+      Alchemist: false
+      Blacksmith: false
+    Classes:
+      Third: false

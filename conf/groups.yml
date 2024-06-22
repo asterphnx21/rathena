@@ -46,8 +46,14 @@ Body:
     Name: Player
     Level: 0
     Commands:
+      autotrade: true
       changedress: true
       resurrect: true
+      rates: true
+      who: true
+      request: true
+      mobinfo: true
+      whereis: true
     Permissions:
       # without this basic permissions regular players could not trade or party
       can_trade: true
@@ -114,7 +120,7 @@ Body:
     LogCommands: true
     Permissions:
       receive_requests: true
-      view_equipment: true
+      view_equipment: false
   - Id: 3
     Name: Script Manager
     Inherit:
@@ -182,6 +188,11 @@ Body:
     Commands:
       rates: true
       who: true
+      request: true
+      mobinfo: true
+      whereis: true
+      autoattack: true
+      autotrade: true
   - Id: 10
     Name: Law Enforcement
     Inherit:

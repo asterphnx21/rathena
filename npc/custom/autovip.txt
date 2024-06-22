@@ -1,0 +1,8 @@
+-	script	VIP_TIME	-1,{
+OnPCLoginEvent:
+		if (vip_status(1)) {
+			dispbottom "Your VIP expires on : "+vip_status(2);
+			dispbottom "Time left : "+vip_status(3);
+			end;
+		}
+	}

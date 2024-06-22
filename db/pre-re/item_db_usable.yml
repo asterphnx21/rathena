@@ -4768,6 +4768,7 @@ Body:
       NoGuildStorage: true
       NoMail: true
       NoAuction: true
+      NoTrade: true
     Script: |
       sc_start SC_EXPBOOST,1800000,50;
   - Id: 12209
@@ -16060,9 +16061,9 @@ Body:
     Weight: 10
     Trade:
       NoDrop: true
-      NoTrade: true
-      NoSell: true
-      NoCart: true
+      NoTrade: false
+      NoSell: false
+      NoCart: false
       NoGuildStorage: true
       NoMail: true
       NoAuction: true
@@ -22101,3 +22102,88 @@ Body:
       Third_Upper: true
       Third_Baby: true
     EquipLevelMin: 1
+  - Id: 31498
+    AegisName: VIP_Pass_1D
+    Name: VIP Pass 1D
+    Type: Usable
+    Buy: 0
+    Weight: 1
+    Trade:
+      Override: 1
+      NoDrop: true
+      NoTrade: false
+      NoSell: true
+      NoCart: false
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      atcommand "@vip +1d/j "+strcharinfo(0)+"";
+  - Id: 31499
+    AegisName: VIP_Pass_1D_NT
+    Name: VIP Pass 1D
+    Type: Usable
+    Buy: 0
+    Weight: 1
+    Trade:
+      Override: 1
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+      NoStorage: true 
+    Script: |
+      atcommand "@vip +1d/j "+strcharinfo(0)+"";
+  - Id: 31500
+    AegisName: Elite_Siege_Supply_Box_NT
+    Name: Elite Siege Supply Box NT
+    Type: Cash
+    Buy: 20
+    Weight: 10
+    Trade:
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+      NoStorage: true
+    Script: |
+      getitem 31501,100;
+      getitem 31502,50;
+  - Id: 31501
+    AegisName: Siege_White_Potion_NT
+    Name: Newbie White Potion
+    Type: Healing
+    Weight: 10
+    Trade:
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+      NoStorage: true
+    Script: |
+      itemheal rand(400,500),0;
+  - Id: 31502
+    AegisName: Siege_Blue_Potion_NT
+    Name: Newbie Blue Potion
+    Type: Healing
+    Weight: 10
+    Trade:
+      NoDrop: true
+      NoTrade: true
+      NoSell: true
+      NoCart: true
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+      NoStorage: true
+    Script: |
+      itemheal 0,rand(50,70);

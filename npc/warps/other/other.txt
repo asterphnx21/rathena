@@ -33,3 +33,5 @@
 //guild_vs5,0,0,0	warp	warp4	0,0,hoge,0,0
 //guild_vs5,0,0,0	warp	warp4	0,0,hoge,0,0
 //guild_vs5,0,0,0	warp	warp4	0,0,hoge,0,0
+
+

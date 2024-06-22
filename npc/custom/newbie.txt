@@ -1,0 +1,41 @@
+// Freebies NPC
+// This NPC gives out freebies one time per character.
+
+new_1-1,55,114,4	script	Freebies Giveaways#nv	10307,{
+	OnInit:
+	initnpctimer;
+	end;
+
+	OnTimer1000:
+	showscript("[Freebies]");
+	setnpctimer 0;
+	end;
+	// Define the items to give
+	setarray .@item_ids[0], 31500, 31499, 20307, 12263, 14592, 12210;
+	setarray .@item_amounts[0], 5, 1, 1, 5, 5, 3;
+
+	// Check if the player has already received the freebies
+	if ( #freebies_received ) {
+		mes "[Freebies]";
+		mes "Sorry, you have already received your freebies.";
+		close;
+	}
+
+	// Give the items to the player
+	for ( .@i = 0; .@i < getarraysize( .@item_ids ); .@i++ ) {
+		getitem .@item_ids[.@i], .@item_amounts[.@i];
+	}
+
+	// Mark the player as having received the freebies
+	set #freebies_received, 1;
+
+	mes "[Freebies]";
+	mes "Here are your freebies! Enjoy!";
+	close;
+	
+	
+}
+new_2-1,55,114,4	duplicate(Freebies Giveaways#nv)	Freebies Giveaways#nv2	10307
+new_3-1,55,114,4	duplicate(Freebies Giveaways#nv)	Freebies Giveaways#nv3	10307
+new_4-1,55,114,4	duplicate(Freebies Giveaways#nv)	Freebies Giveaways#nv4	10307
+new_5-1,55,114,4	duplicate(Freebies Giveaways#nv)	Freebies Giveaways#nv5	10307

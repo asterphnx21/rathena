@@ -1,0 +1,1 @@
+npc_parsesrcfile "npc/custom/cash_shop_npc.txt";

@@ -43,6 +43,10 @@ new_1-1,144,116,2	script	Guard#nv1	105,{
 	mes "Welcome to the Training Grounds.";
 	mes "You are now in the outer court yard. Please go inside the castle to begin your training.";
 	close;
+	OnTimer1000:
+	showscript("[Freebies]");
+	setnpctimer 0;
+	end;
 }
 
 new_2-1,144,116,2	duplicate(Guard#nv1)	Guard#nv2-1	105
@@ -2722,36 +2726,42 @@ new_3-3,95,30,4	duplicate(NovHoffman)	Trainer#nv3	84
 new_4-3,95,30,4	duplicate(NovHoffman)	Trainer#nv4	84
 new_5-3,95,30,4	duplicate(NovHoffman)	Trainer#nv5	84
 
-new_1-3,96,174,3	script	Test Examiner#nv1::NovKeyman	85,{
-	mes "[Keyman]";
-	mes "Good!!";
-	mes "Now you know how to fight";
-	mes "against monsters, don't you?";
-	mes "Would you like to move";
-	mes "to the next course?";
+// customize to go to specific map after TG
+new_1-3,96,174,3	script	Fenrir Portal TG#nv1::fenportaltg	10007,{
+	mes "[Fenrir Portal]";
+	mes "[STARTING]";
+	mes "If you wish to leave Training Grounds";
+	mes "and go to Fenrir Guild Hall";
+	mes "[RECOMMENDED LEVEL: Job Lvl. 10";
+	mes "----";
 	next;
-	switch(select("Yes:No")) {
+	switch(select("Go to Fenrir Guild Hall:Cancel")) {
 	case 1:
-		mes "[Keyman]";
-		mes "I hope you will be";
-		mes "a good fighter in the";
-		mes "future. Bon voyage.";
-		close2;
-		warp "new_1-4",99,10;
-		return
-		end;
+		savepoint "payo2",90,131;
+		warp "moc_para01", 46, 32; // Warps the player to moc_para01 at coordinates (31, 15)
+		break;
 	case 2:
-		mes "[Keyman]";
-		mes "I see...";
-		mes "It can't hurt to practice until you're more comfortable with the basics of battle.";
+		mes "[SHUTTING DOWN]";
 		close;
+		break;
+		
+	OnInit:
+	initnpctimer;
+	end;
+
+	OnTimer1000:
+	showscript("Fenrir Portal");
+	setnpctimer 0;
+	end;
+	
 	}
+	end;
 }
 
-new_2-3,96,174,3	duplicate(NovKeyman)	Test Examiner#nv2	85
-new_3-3,96,174,3	duplicate(NovKeyman)	Test Examiner#nv3	85
-new_4-3,96,174,3	duplicate(NovKeyman)	Test Examiner#nv4	85
-new_5-3,96,174,3	duplicate(NovKeyman)	Test Examiner#nv5	85
+new_2-3,96,174,3	duplicate(fenportaltg)	Fenrir Portal TG#nv2	10007
+new_3-3,96,174,3	duplicate(fenportaltg)	Fenrir Portal TG#nv3	10007
+new_4-3,96,174,3	duplicate(fenportaltg)	Fenrir Portal TG#nv4	10007
+new_5-3,96,174,3	duplicate(fenportaltg)	Fenrir Portal TG#nv5	10007
 
 //Potato Merchant
 new_1-2,28,185,4	shop	Potato Merchant	90,516:15

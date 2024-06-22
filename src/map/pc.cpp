@@ -15935,3 +15935,4 @@ void do_init_pc(void) {
 	ers_chunk_size(num_reg_ers, 300);
 	ers_chunk_size(str_reg_ers, 50);
 }
+

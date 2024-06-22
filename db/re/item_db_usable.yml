@@ -56385,7 +56385,7 @@ Body:
     Flags:
       NoConsume: true
     Delay:
-      Duration: 1200000
+      Duration: 5000
     Trade:
       NoDrop: true
       NoTrade: true

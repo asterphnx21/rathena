@@ -41075,3 +41075,300 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 654
+  - Id: 2829
+    AegisName: Greed_Clip
+    Name: Greed Clip
+    Type: Armor
+    Jobs:
+      All: true
+      Novice: false
+      SuperNovice: false
+    Locations:
+      Both_Accessory: true
+    ArmorLevel: 1
+    EquipLevelMin: 10
+    Script: |
+      skill "BS_GREED",1;
+  - Id: 20500
+    AegisName: T_Archangel_Wing
+    Name: Archangel Wing
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 1
+  - Id: 20502
+    AegisName: C_Devil_Wing
+    Name: Costume Little Devil Wings
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+  - Id: 20405
+    AegisName: C_Eremes_Scarf
+    Name: Costume Eremes Scarf
+    Type: Armor
+    Locations:
+      Costume_Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 1416
+  - Id: 20357
+    AegisName: C_Straight_Pony_YL
+    Name: Costume Straight Pony Yellow
+    Type: Armor
+    Locations:
+      Costume_Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 1389
+  - Id: 20353
+    AegisName: C_Cowlick_RD
+    Name: Costume Bouncing Hair Red
+    Type: Armor
+    Locations:
+      Costume_Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 1385
+  - Id: 20317
+    AegisName: C_CatEars_Cyber_HeadP
+    Name: Costume Nekomimi Cyber Headphone
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 1353
+  - Id: 20315
+    AegisName: C_Analyze_Eye
+    Name: Costume Analyze Eye
+    Type: Armor
+    Locations:
+      Costume_Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 1351
+  - Id: 20314
+    AegisName: C_New_Wave_Sunglass
+    Name: Costume New Wave Sunglasses
+    Type: Armor
+    Locations:
+      Costume_Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 856
+  - Id: 20312
+    AegisName: C_Baron_Evil_Eye
+    Name: Costume Baron's Evil Eye
+    Type: Armor
+    Locations:
+      Costume_Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 989
+  - Id: 20311
+    AegisName: C_Magical_Booster
+    Name: Costume Magical Booster
+    Type: Armor
+    Locations:
+      Costume_Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 873
+  - Id: 20307
+    AegisName: C_BeginnerMark
+    Name: Costume Beginner Cap
+    Type: Armor
+    Locations:
+      Costume_Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 1348
+    Script: |
+      bonus2 bExpAddClass,Class_All,10;
+  - Id: 20295
+    AegisName: C_Poring_Sunglasses_J
+    Name: Costume Poring Sunglasses
+    Type: Armor
+    Locations:
+      Costume_Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 954
+  - Id: 20286
+    AegisName: C_Under_Rim_Glasses_Red
+    Name: Costume Under Rim Glasses Red
+    Type: Armor
+    Locations:
+      Costume_Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 1332
+  - Id: 20285
+    AegisName: C_Blossom_Fluttering
+    Name: Costume Dancing Fallen Sakura
+    Type: Armor
+    Locations:
+      Costume_Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 1331
+  - Id: 20284
+    AegisName: C_Cherry_Blossom_Hat
+    Name: Costume Sakura Hat
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 1330
+  - Id: 20213
+    AegisName: C_Sirt_Evil_Eye
+    Name: Costume Robot Eyes
+    Type: Armor
+    Locations:
+      Costume_Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 345
+  - Id: 20177
+    AegisName: C_Drooping_Dorasuke
+    Name: Costume Drooping Dorasuke
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 1290
+  - Id: 20175
+    AegisName: C_Diabolic_Headphone
+    Name: Costume Diabolic Headphone
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 1284
+  - Id: 20167
+    AegisName: C_Devi_Headphone
+    Name: Costume Deviruchi Headphone
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 805
+  - Id: 20141
+    AegisName: C_Observer
+    Name: Costume Observer
+    Type: Armor
+    Locations:
+      Costume_Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 337
+  - Id: 20132
+    AegisName: C_Subject_Aura
+    Name: Costume Test Subject Aura
+    Type: Armor
+    Locations:
+      Costume_Head_Low: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 1267
+  - Id: 20116
+    AegisName: C_Mermaid_Headphone
+    Name: Mermaid Headphone
+    Type: Armor
+    Locations:
+      Costume_Head_Mid: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 1254
+  - Id: 20504
+    AegisName: C_Cupid_Wing_Pink
+    Name: Costume Cupid's Pink Wings
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 14
+  - Id: 20507
+    AegisName: C_Poring_Bag
+    Name: Costume Poring Bag
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 16
+  - Id: 20509
+    AegisName: C_Wings_of_Uriel
+    Name: Costume Wings of Uriel
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 17
+  - Id: 20510
+    AegisName: C_SwordWing
+    Name: Costume Sword Wing
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 19
+  - Id: 20511
+    AegisName: C_Blue_Fairy_Wing
+    Name: Blue Wings of Fairy
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 21
+  - Id: 20512
+    AegisName: C_Bravery_Bag
+    Name: Costume Adventurer's Backpack
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 2
+  - Id: 20514
+    AegisName: C_Thanatos_Sword
+    Name: Costume Thanatos Sword
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 23
+  - Id: 20515
+    AegisName: C_Magic_Circle
+    Name: Costume Magic Circle
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Script: |
+      hateffect(HAT_EF_MAGICCIRCLE,true);
+    UnEquipScript: |
+      hateffect(HAT_EF_MAGICCIRCLE,false);
+  - Id: 20516
+    AegisName: C_Wings_of_Michael
+    Name: Costume Wings of Michael
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 24
