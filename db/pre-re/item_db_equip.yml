@@ -41098,14 +41098,8 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 1
-  - Id: 20502
-    AegisName: C_Devil_Wing
-    Name: Costume Little Devil Wings
-    Type: Armor
-    Locations:
-      Costume_Garment: true
-    ArmorLevel: 1
-    EquipLevelMin: 1
+    Script: |
+        bonus bAddMaxWeight, 20000;   
   - Id: 20405
     AegisName: C_Eremes_Scarf
     Name: Costume Eremes Scarf
@@ -41115,6 +41109,9 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 1416
+    Script: |
+        bonus2 bExpAddClass,Class_All,10;
+        bonus2 bDropAddClass,Class_All,5;
   - Id: 20357
     AegisName: C_Straight_Pony_YL
     Name: Costume Straight Pony Yellow
@@ -41124,6 +41121,9 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 1389
+    Script: |
+        bonus2 bExpAddClass,Class_All,10;
+        bonus2 bDropAddClass,Class_All,5;
   - Id: 20353
     AegisName: C_Cowlick_RD
     Name: Costume Bouncing Hair Red
@@ -41133,6 +41133,9 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 1385
+    Script: |
+        bonus2 bExpAddClass,Class_All,10;
+        bonus2 bDropAddClass,Class_All,5;
   - Id: 20317
     AegisName: C_CatEars_Cyber_HeadP
     Name: Costume Nekomimi Cyber Headphone
@@ -41142,6 +41145,9 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 1353
+    Script: |
+        bonus2 bExpAddClass,Class_All,10;
+        bonus2 bDropAddClass,Class_All,5;
   - Id: 20315
     AegisName: C_Analyze_Eye
     Name: Costume Analyze Eye
@@ -41151,6 +41157,9 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 1351
+    Script: |
+        bonus2 bExpAddClass,Class_All,10;
+        bonus2 bDropAddClass,Class_All,5;
   - Id: 20314
     AegisName: C_New_Wave_Sunglass
     Name: Costume New Wave Sunglasses
@@ -41160,6 +41169,9 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 856
+    Script: |
+        bonus2 bExpAddClass,Class_All,10;
+        bonus2 bDropAddClass,Class_All,5;
   - Id: 20312
     AegisName: C_Baron_Evil_Eye
     Name: Costume Baron's Evil Eye
@@ -41169,6 +41181,9 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 989
+    Script: |
+        bonus2 bExpAddClass,Class_All,10;
+        bonus2 bDropAddClass,Class_All,5;
   - Id: 20311
     AegisName: C_Magical_Booster
     Name: Costume Magical Booster
@@ -41178,6 +41193,9 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 873
+    Script: |
+        bonus2 bExpAddClass,Class_All,10;
+        bonus2 bDropAddClass,Class_All,5;
   - Id: 20307
     AegisName: C_BeginnerMark
     Name: Costume Beginner Cap
@@ -41188,7 +41206,15 @@ Body:
     EquipLevelMin: 1
     View: 1348
     Script: |
-      bonus2 bExpAddClass,Class_All,10;
+        bonus2 bExpAddClass,Class_All,5;
+        if(BaseLevel<99) 
+        bonus bHit,30-(3*(BaseLevel/10));			
+        bonus bMaxHP,1000-(100*(BaseLevel/10));			
+        bonus bMaxSP,200-(20*(BaseLevel/10));			
+        bonus bVariableCastrate,-10+(BaseLevel/10);			
+        bonus bHealPower,150-(10*(BaseLevel/10));			
+        bonus bHealPower2,10*(BaseLevel/10);			
+        bonus bAddItemHealRate,10*(BaseLevel/10);
   - Id: 20295
     AegisName: C_Poring_Sunglasses_J
     Name: Costume Poring Sunglasses
@@ -41198,6 +41224,9 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 954
+    Script: |
+        bonus2 bExpAddClass,Class_All,10;
+        bonus2 bDropAddClass,Class_All,5;
   - Id: 20286
     AegisName: C_Under_Rim_Glasses_Red
     Name: Costume Under Rim Glasses Red
@@ -41207,6 +41236,9 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 1332
+    Script: |
+        bonus2 bExpAddClass,Class_All,10;
+        bonus2 bDropAddClass,Class_All,5;
   - Id: 20285
     AegisName: C_Blossom_Fluttering
     Name: Costume Dancing Fallen Sakura
@@ -41216,6 +41248,8 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 1331
+    Script: |
+        bonus bAddMaxWeight, 20000;
   - Id: 20284
     AegisName: C_Cherry_Blossom_Hat
     Name: Costume Sakura Hat
@@ -41225,6 +41259,9 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 1330
+    Script: |
+        bonus2 bExpAddClass,Class_All,10;
+        bonus2 bDropAddClass,Class_All,5;
   - Id: 20213
     AegisName: C_Sirt_Evil_Eye
     Name: Costume Robot Eyes
@@ -41234,6 +41271,9 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 345
+    Script: |
+        bonus2 bExpAddClass,Class_All,10;
+        bonus2 bDropAddClass,Class_All,5;
   - Id: 20177
     AegisName: C_Drooping_Dorasuke
     Name: Costume Drooping Dorasuke
@@ -41243,6 +41283,9 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 1290
+    Script: |
+        bonus2 bExpAddClass,Class_All,10;
+        bonus2 bDropAddClass,Class_All,5;
   - Id: 20175
     AegisName: C_Diabolic_Headphone
     Name: Costume Diabolic Headphone
@@ -41252,6 +41295,9 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 1284
+    Script: |
+        bonus2 bExpAddClass,Class_All,10;
+        bonus2 bDropAddClass,Class_All,5;
   - Id: 20167
     AegisName: C_Devi_Headphone
     Name: Costume Deviruchi Headphone
@@ -41261,6 +41307,9 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 805
+    Script: |
+        bonus2 bExpAddClass,Class_All,10;
+        bonus2 bDropAddClass,Class_All,5;
   - Id: 20141
     AegisName: C_Observer
     Name: Costume Observer
@@ -41270,6 +41319,9 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 337
+    Script: |
+        bonus2 bExpAddClass,Class_All,10;
+        bonus2 bDropAddClass,Class_All,5;
   - Id: 20132
     AegisName: C_Subject_Aura
     Name: Costume Test Subject Aura
@@ -41279,6 +41331,8 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 1267
+    Script: |
+        bonus bAddMaxWeight, 20000;
   - Id: 20116
     AegisName: C_Mermaid_Headphone
     Name: Mermaid Headphone
@@ -41288,6 +41342,9 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 1254
+    Script: |
+        bonus2 bExpAddClass,Class_All,10;
+        bonus2 bDropAddClass,Class_All,5;
   - Id: 20504
     AegisName: C_Cupid_Wing_Pink
     Name: Costume Cupid's Pink Wings
@@ -41297,6 +41354,8 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 14
+    Script: |
+        bonus bAddMaxWeight, 20000;
   - Id: 20507
     AegisName: C_Poring_Bag
     Name: Costume Poring Bag
@@ -41306,6 +41365,8 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 16
+    Script: |
+        bonus bAddMaxWeight, 5000;
   - Id: 20509
     AegisName: C_Wings_of_Uriel
     Name: Costume Wings of Uriel
@@ -41315,6 +41376,8 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 17
+    Script: |
+        bonus bAddMaxWeight, 20000;
   - Id: 20510
     AegisName: C_SwordWing
     Name: Costume Sword Wing
@@ -41324,6 +41387,8 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 19
+    Script: |
+        bonus bAddMaxWeight, 20000;
   - Id: 20511
     AegisName: C_Blue_Fairy_Wing
     Name: Blue Wings of Fairy
@@ -41333,6 +41398,9 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 21
+    Script: |
+        bonus bAddMaxWeight, 20000;
+    
   - Id: 20512
     AegisName: C_Bravery_Bag
     Name: Costume Adventurer's Backpack
@@ -41341,6 +41409,8 @@ Body:
       Costume_Garment: true
     ArmorLevel: 1
     EquipLevelMin: 1
+    Script: |
+        bonus bAddMaxWeight, 10000;
     View: 2
   - Id: 20514
     AegisName: C_Thanatos_Sword
@@ -41350,6 +41420,8 @@ Body:
       Costume_Garment: true
     ArmorLevel: 1
     EquipLevelMin: 1
+    Script: |
+        bonus bAddMaxWeight, 20000;
     View: 23
   - Id: 20515
     AegisName: C_Magic_Circle
@@ -41360,7 +41432,8 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     Script: |
-      hateffect(HAT_EF_MAGICCIRCLE,true);
+      hateffect(HAT_EF_MAGICCIRCLE,true); 
+      bonus bAddMaxWeight, 20000;
     UnEquipScript: |
       hateffect(HAT_EF_MAGICCIRCLE,false);
   - Id: 20516
@@ -41372,3 +41445,59 @@ Body:
     ArmorLevel: 1
     EquipLevelMin: 1
     View: 24
+    Script: |
+        bonus bAddMaxWeight, 20000;
+        
+  - Id: 31062
+    AegisName: C_Eleanor_Wig
+    Name: Costume Eleanor Wig
+    Type: Armor
+    Locations:
+      Costume_Head_Top: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 1502
+    Script: |
+        bonus2 bExpAddClass,Class_All,10;
+        bonus2 bDropAddClass,Class_All,5;
+## soon to adds
+  - Id: 20737
+    AegisName: C_Kirin_Wing
+    Name: Costume Kirin Wing
+    Type: Armor
+    Buy: 10
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 6
+  - Id: 20746
+    AegisName: C_Rudra_Wing
+    Name: Costume Rudra Wings
+    Type: Armor
+    Buy: 10
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    View: 8
+  - Id: 20525
+    AegisName: C_Bloody_Wing
+    Name: Costume Crimson Wings
+    Type: Armor
+    View: 33
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+  - Id: 20522
+    AegisName: C_Blessings_Of_Soul
+    Name: Costume Blessings Of Soul
+    Type: Armor
+    Locations:
+      Costume_Garment: true
+    ArmorLevel: 1
+    EquipLevelMin: 1
+    Script: |
+      hateffect(HAT_EF_C_BLESSINGS_OF_SOUL,true);
+    UnEquipScript: |
+      hateffect(HAT_EF_C_BLESSINGS_OF_SOUL,false);

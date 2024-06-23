@@ -1,0 +1,101 @@
+// Potion Crafter NPC
+moc_para01,36,185,4	script	Potion Crafter	748,{
+	mes "[Potion Crafter]";
+	mes "Hello! I can craft potions for you.";
+	next;
+	select("Red Potion:Yellow Potion:White Potion:Blue Potion");
+
+	if (@menu == 1) goto L_RedPotion;
+	else if (@menu == 2) goto L_YellowPotion;
+	else if (@menu == 3) goto L_WhitePotion;
+	else if (@menu == 4) goto L_BluePotion;
+	end;
+
+L_RedPotion:
+	mes "[Potion Crafter]";
+	mes "How many Red Potions would you like to craft?";
+	input @amount;
+	if (@amount <= 0) {
+		mes "Invalid amount.";
+		close;
+	}
+	if (countitem(507) < @amount || countitem(713) < @amount || Zeny < 5*@amount) {
+		mes "[Potion Crafter]";
+		mes "You don't have the necessary materials.";
+		mes "Red Herb (" + @amount + "), Empty Bottle (" + @amount + "), " + (5*@amount) + " Zeny.";
+		close;
+	}
+	delitem 507,@amount; // Red Herb
+	delitem 713,@amount; // Empty Bottle
+	Zeny -= 5*@amount;
+	getitem 501,@amount; // Red Potion
+	mes "[Potion Crafter]";
+	mes "Here are your Red Potions!";
+	close;
+
+L_YellowPotion:
+	mes "[Potion Crafter]";
+	mes "How many Yellow Potions would you like to craft?";
+	input @amount;
+	if (@amount <= 0) {
+		mes "Invalid amount.";
+		close;
+	}
+	if (countitem(508) < @amount || countitem(713) < @amount || Zeny < 100*@amount) {
+		mes "[Potion Crafter]";
+		mes "You don't have the necessary materials.";
+		mes "Yellow Herb (" + @amount + "), Empty Bottle (" + @amount + "), " + (100*@amount) + " Zeny.";
+		close;
+	}
+	delitem 508,@amount; // Yellow Herb
+	delitem 713,@amount; // Empty Bottle
+	Zeny -= 100*@amount;
+	getitem 503,@amount; // Yellow Potion
+	mes "[Potion Crafter]";
+	mes "Here are your Yellow Potions!";
+	close;
+
+L_WhitePotion:
+	mes "[Potion Crafter]";
+	mes "How many White Potions would you like to craft?";
+	input @amount;
+	if (@amount <= 0) {
+		mes "Invalid amount.";
+		close;
+	}
+	if (countitem(509) < @amount || countitem(713) < @amount || Zeny < 300*@amount) {
+		mes "[Potion Crafter]";
+		mes "You don't have the necessary materials.";
+		mes "White Herb (" + @amount + "), Empty Bottle (" + @amount + "), " + (300*@amount) + " Zeny.";
+		close;
+	}
+	delitem 509,@amount; // White Herb
+	delitem 713,@amount; // Empty Bottle
+	Zeny -= 300*@amount;
+	getitem 504,@amount; // White Potion
+	mes "[Potion Crafter]";
+	mes "Here are your White Potions!";
+	close;
+
+L_BluePotion:
+	mes "[Potion Crafter]";
+	mes "How many Blue Potions would you like to craft?";
+	input @amount;
+	if (@amount <= 0) {
+		mes "Invalid amount.";
+		close;
+	}
+	if (countitem(510) < @amount || countitem(713) < @amount || Zeny < 300*@amount) {
+		mes "[Potion Crafter]";
+		mes "You don't have the necessary materials.";
+		mes "Blue Herb (" + @amount + "), Empty Bottle (" + @amount + "), " + (300*@amount) + " Zeny.";
+		close;
+	}
+	delitem 510,@amount; // Blue Herb
+	delitem 713,@amount; // Empty Bottle
+	Zeny -= 300*@amount;
+	getitem 505,@amount; // Blue Potion
+	mes "[Potion Crafter]";
+	mes "Here are your Blue Potions!";
+	close;
+}

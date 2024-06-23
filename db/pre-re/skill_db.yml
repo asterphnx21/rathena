@@ -1945,6 +1945,8 @@ Body:
     MaxLevel: 10
     Type: Weapon
     Range: -1
+    DamageFlags:
+        Critical: true
     Hit: Multi_Hit
     HitCount: 2
     Element: Weapon

@@ -59,3 +59,9 @@ umbala,106,150,3	duplicate(Fenrir Portal)	Fenrir Portal#umb	10007
 veins,214,123,4	duplicate(Fenrir Portal)	Fenrir Portal#ve	10007
 xmas,150,136,6	duplicate(Fenrir Portal)	Fenrir Portal#xmas	10007
 yuno,162,47,4	duplicate(Fenrir Portal)	Fenrir Portal#yuno	10007
+
+
+// warps on fenrir hall
+moc_para01,49,15,0	warp	FenH1	2,5,moc_para01,47,167
+
+moc_para01,47,161,0	warp	FenH2	2,5,moc_para01,48,21
