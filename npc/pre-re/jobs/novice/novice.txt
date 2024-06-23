@@ -43,9 +43,6 @@ new_1-1,144,116,2	script	Guard#nv1	105,{
 	mes "Welcome to the Training Grounds.";
 	mes "You are now in the outer court yard. Please go inside the castle to begin your training.";
 	close;
-	OnTimer1000:
-	showscript("[Freebies]");
-	setnpctimer 0;
 	end;
 }
 

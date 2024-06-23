@@ -22187,3 +22187,81 @@ Body:
       NoStorage: true
     Script: |
       itemheal 0,rand(50,70);
+  - Id: 31503
+    AegisName: VIP_Pass_3D
+    Name: VIP Pass 3D
+    Type: Usable
+    Buy: 0
+    Weight: 1
+    Trade:
+      Override: 1
+      NoDrop: true
+      NoTrade: false
+      NoSell: true
+      NoCart: false
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      atcommand "@vip +3d/j "+strcharinfo(0)+"";
+  - Id: 31504
+    AegisName: VIP_Pass_7D
+    Name: VIP Pass 7D
+    Type: Usable
+    Buy: 0
+    Weight: 1
+    Trade:
+      Override: 1
+      NoDrop: true
+      NoTrade: false
+      NoSell: true
+      NoCart: false
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      atcommand "@vip +7d/j "+strcharinfo(0)+"";
+  - Id: 31505
+    AegisName: VIP_Pass_15D
+    Name: VIP Pass 15D
+    Type: Usable
+    Buy: 0
+    Weight: 1
+    Trade:
+      Override: 1
+      NoDrop: true
+      NoTrade: false
+      NoSell: true
+      NoCart: false
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      atcommand "@vip +15d/j "+strcharinfo(0)+"";
+  - Id: 31506
+    AegisName: VIP_Pass_30D
+    Name: VIP Pass 30D
+    Type: Usable
+    Buy: 0
+    Weight: 1
+    Trade:
+      Override: 1
+      NoDrop: true
+      NoTrade: false
+      NoSell: true
+      NoCart: false
+      NoGuildStorage: true
+      NoMail: true
+      NoAuction: true
+    Script: |
+      atcommand "@vip +1m "+strcharinfo(0)+"";
+  - Id: 31507
+    AegisName: Battle_Manual50
+    Name: Field Manual 50%
+    Type: Usable
+    Buy: 2
+    Weight: 10
+    NoUse:
+      Sitting: true
+    Script: |
+      sc_start SC_EXPBOOST,1800000,50;
